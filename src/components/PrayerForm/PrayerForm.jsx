@@ -10,7 +10,19 @@ function prayerForm() {
     const [mosque, setMosque] = useState("false");
 
     
-   
+    const addPrayer = (event)
+        event.preventDefault();
+        const history = {
+            user_id,
+            prayer_id,
+            mosque,
+        }
+        console.log(user_id, prayer_id,mosque,);
+        console.log(history);
+
+
+
+
 
 
 }
