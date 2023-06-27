@@ -34,7 +34,35 @@ function prayerForm() {
 return (
         <>
         <form onSubmit={addPrayer()}>
-            
+            <label htmlFor="user_id"></label>
+            <input 
+            type="text" 
+            name="user"
+            value={user_id}
+            onChange={(event) => {
+                setUser_Id(event.target.value)
+            }}
+            />
+
+            <label htmlFor="prayer_id"></label>
+            <input 
+            type="text" 
+            name="prayer"
+            value={prayer_id}
+            onChange={(event) => {
+                prayer_id(event.target.value)
+            }}
+            />  
+
+            <label htmlFor="mosque"></label>
+            <input 
+            type="text" 
+            name="mosque"
+            value={prayer_id}
+            onChange={(event) => {
+                mosque(event.target.value)
+            }}
+            />     
             
             <input type="submit" value={"SUBMIT"}/> 
         </form>
