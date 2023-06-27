@@ -10,7 +10,7 @@ function* postPryer(action){
             type: 'FETCH_HISTORY'
         });
     } catch (error){
-        console.log(err,'error in postItem Saga');
+        console.log(err,'error in postPrayer Saga');
         if(error.response.status ===500){
 
             yield put ({type:'POST_ERR'});

@@ -23,6 +23,13 @@ router.get('/', (req, res) => {
  */
 router.post('/', (req, res) => {
   // POST route code here
+  const queryText = `INSERT INTO "prayer_table" ("prayer_type" , "mosque") VALUES ($1 , $2)`
+  pool.query(queryText , [req.body.prayer_type , req.body.mosque])
+  .then(result => {
+    res.send(result.rows)
+  }).catch(err => {
+    console.log('Error in POST /prayer' , err)
+  })
 });
 
 module.exports = router;
