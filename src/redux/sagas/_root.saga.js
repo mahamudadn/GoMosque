@@ -3,6 +3,8 @@ import loginSaga from './login.saga';
 import registrationSaga from './registration.saga';
 import userSaga from './user.saga';
 import historySaga from './history.saga';
+import postPryer from './post.prayer.saga';
+
 
 
 // rootSaga is the primary saga.

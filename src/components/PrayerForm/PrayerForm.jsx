@@ -19,6 +19,7 @@ function prayerForm() {
         }
         console.log(user_id, prayer_id,mosque,);
         console.log(history);
+        dispatchEvent({ type: "POST_PRAYER", payload:history})
 
 return (
         <>
@@ -31,7 +32,8 @@ return (
             <option value="magrib">magrib</option>
             <option value="isha">isha</option>
             </select>
-
+            
+            <input type="submit" value={"SUBMIT"}/> 
         </form>
         
         
