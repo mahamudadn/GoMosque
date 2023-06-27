@@ -7,8 +7,8 @@ function weeklyHistory(weekly) {
         <>
         <p>{weekly.user_id}</p>
         <p>{weekly.prayer_id}</p>
-        <p>{mosque}</p>
-        <p>{date}</p>
+        <p>{weekly.mosque}</p>
+        <p>{weekly.date}</p>
         </>
     )
     

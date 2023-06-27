@@ -10,7 +10,8 @@ router.get('/', (req, res) => {
  const queryText = `SELECT * FROM  "weekly_history"`;
   pool.query(queryText)
   .then(result => {
-    res.send(result.rows)
+    console.log('djflsakjf el=>>>>>',result.rows);
+    // res.send(result.rows);
   })
   .catch(err => {
     console.log('error getting prayers', err);
@@ -23,8 +24,8 @@ router.get('/', (req, res) => {
  */
 router.post('/', (req, res) => {
   // POST route code here
-  const queryText = `INSERT INTO "prayer_table" ("prayer_type" , "mosque") VALUES ($1 , $2)`
-  pool.query(queryText , [req.body.prayer_type , req.body.mosque])
+  const queryText = `INSERT INTO "weekly_history" ("user_id" , "prayer_id", "mosque", "date") VALUES ($1 , $2, $3, $4)`;
+  pool.query(queryText , [req.user.id, req.body.prayer_id , req.body.mosque, req.body.date])
   .then(result => {
     res.send(result.rows)
   }).catch(err => {

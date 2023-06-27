@@ -19,6 +19,7 @@ import InfoPage from '../InfoPage/InfoPage';
 import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
+import PrayerForm from '../PrayerForm/PrayerForm';
 
 
 import './App.css';
@@ -68,6 +69,16 @@ function App() {
           >
             <InfoPage />
           </ProtectedRoute>
+
+          <ProtectedRoute
+            // logged in shows InfoPage else shows LoginPage
+            exact
+            path="/prayerform"
+          >
+            <PrayerForm />
+          </ProtectedRoute>
+
+
 
           <Route
             exact
