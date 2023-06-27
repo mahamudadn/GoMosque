@@ -20,7 +20,25 @@ function prayerForm() {
         console.log(user_id, prayer_id,mosque,);
         console.log(history);
 
+return (
+        <>
+        <form onSubmit={addPrayer}>
+            <label for="payers">Choose a prayer:</label>
+            <select name="prayers" id="prayers">
+            <option value="fajr">fajr</option>
+            <option value="dhuhr">dhuhr</option>
+            <option value="asr">asr</option>
+            <option value="magrib">magrib</option>
+            <option value="isha">isha</option>
+            </select>
 
+        </form>
+        
+        
+        
+        
+        </>
+    )
 
 
 
