@@ -20,6 +20,7 @@ import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
 import PrayerForm from '../PrayerForm/PrayerForm';
+import WeeklyPrayer from '../WeeklyPrayer/WeeklyPrayer';
 
 
 import './App.css';
@@ -76,6 +77,14 @@ function App() {
             path="/prayerform"
           >
             <PrayerForm />
+          </ProtectedRoute>
+
+          <ProtectedRoute
+            // logged in shows InfoPage else shows LoginPage
+            exact
+            path="/weeklyprayer"
+          >
+            <WeeklyPrayer />
           </ProtectedRoute>
 
 

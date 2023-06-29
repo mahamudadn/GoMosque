@@ -30,7 +30,10 @@ function Nav() {
 
             <Link className="navLink" to="/prayerform">
               Prayers
-            </Link>            
+            </Link> 
+            <Link className="navLink" to="/weeklyprayer">
+              Weekly Prayers
+            </Link>           
 
             <Link className="navLink" to="/info">
               Info Page

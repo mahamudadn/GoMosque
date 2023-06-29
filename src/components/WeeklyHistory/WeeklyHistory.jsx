@@ -1,14 +1,15 @@
 import react from 'react';
 
-function weeklyHistory(weekly) {
-    console.log('weekly history', weekly);
+
+function weeklyHistory({prayer}) {
+    console.log('weekly history', prayer);
 
     return(
         <>
-        <p>{weekly.user_id}</p>
-        <p>{weekly.prayer_id}</p>
-        <p>{weekly.mosque}</p>
-        <p>{weekly.date}</p>
+        <p>{prayer.prayer_type}</p>
+        <p>{prayer.mosque}</p>
+        <p>{prayer.date}</p>
+        
         </>
     )
     

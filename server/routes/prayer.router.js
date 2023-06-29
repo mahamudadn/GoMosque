@@ -7,11 +7,13 @@ const router = express.Router();
  */
 router.get('/', (req, res) => {
   // GET route code here
- const queryText = `SELECT * FROM  "weekly_history"`;
-  pool.query(queryText)
+  const queryText = `SELECT "prayer_type","weekly_history"."mosque" AS mosque, "date" FROM "weekly_history"
+                    JOIN "prayers_table" ON "weekly_history"."prayer_id"="prayers_table"."id"
+                    WHERE "user_id"=$1`;
+  pool.query(queryText, [req.user.id])
   .then(result => {
     console.log('djflsakjf el=>>>>>',result.rows);
-    // res.send(result.rows);
+    res.send(result.rows);
   })
   .catch(err => {
     console.log('error getting prayers', err);
