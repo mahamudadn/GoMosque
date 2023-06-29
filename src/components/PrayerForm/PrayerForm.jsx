@@ -80,6 +80,8 @@ return (
                     <option value='true'>true</option>
                     <option value='false'>false</option>
                 </select>
+
+                
             <input type="submit" value={"Add Prayer"}/> 
         </form>
         
