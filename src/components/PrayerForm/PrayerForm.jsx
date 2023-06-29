@@ -9,6 +9,7 @@ function prayerForm() {
     const [prayer_id, setPrayer_Id] = useState(0);
     const [mosque, setMosque] = useState("false");
 
+
     
     // const addPrayer = (event)
     //     event.preventDefault();
@@ -34,38 +35,8 @@ console.log(prayer_id);
 return (
         <>
         <form onSubmit={addPrayer}>
-            {/* <label htmlFor="user_id"></label>
-            <input 
-            type="text" 
-            name="user"
-            placeholder="User"
-
-            value={user_id}
-            onChange={(event) => {
-                setUser_Id(event.target.value)
-            }}
-            />
-        
-            <label htmlFor="prayer_id"></label>
-            <input 
-                type="text" 
-                placeholder="Prayer"
-                value={prayer_id}
-                onChange={(event) => {
-                    setPrayer_Id(event.target.value)
-            }}
-            />   */}
-
-            {/* <label htmlFor="mosque"></label>
-            <input 
-                type="text" 
-                name="mosque"
-                placeholder="Mosque"
-                value={mosque}
-                onChange={(event) => {
-                    setMosque(event.target.value)
-            }}
-            />      */}
+    
+            
                 <select onChange={(event)=>setPrayer_Id(event.target.value)} name="prayers" id="prayer_id">
                 <option value="1">Fajr</option>
                 <option value="2">Dhuhr</option>

@@ -22,7 +22,7 @@ return (
         <thead>
             <tr>
                 
-                <th colSpan={5}>Prayer</th>
+                <th>Prayer</th>
                 <th>Mosque</th>
                 <th>Date</th>
             </tr>
@@ -42,12 +42,7 @@ return (
                     <p>All of the prayers can be seen here.</p> */}
                     {history?.map((prayer) => (
                         <tr key={prayer.id}>
-                            {/* <WeeklyHistory prayer={prayer} /> */}
-                            <td>{prayer.prayer_type}</td>
-                            <td>{prayer.mosque} false</td>
-                            <td>{prayer.date}</td>
-                            <td><button>Edit</button></td>
-                            
+                            <WeeklyHistory prayer={prayer} />
                         </tr>
                         
                     ))}
