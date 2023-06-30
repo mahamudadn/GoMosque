@@ -22,7 +22,6 @@ import RegisterPage from '../RegisterPage/RegisterPage';
 import PrayerForm from '../PrayerForm/PrayerForm';
 import WeeklyPrayer from '../WeeklyPrayer/WeeklyPrayer';
 
-
 import './App.css';
 
 function App() {

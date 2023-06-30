@@ -7,9 +7,9 @@ const router = express.Router();
  */
 router.get('/', (req, res) => {
   // GET route code here
-  const queryText = `SELECT "prayer_type","weekly_history"."mosque" AS mosque, "date" FROM "weekly_history"
-                    JOIN "prayers_table" ON "weekly_history"."prayer_id"="prayers_table"."id"
-                    WHERE "user_id"=$1`;
+  const queryText = `SELECT * FROM  "weekly_prayers"
+                      WHERE "user_id" = $1
+                      ORDER BY date DESC;`;
   pool.query(queryText, [req.user.id])
   .then(result => {
     console.log('djflsakjf el=>>>>>',result.rows);
@@ -26,8 +26,9 @@ router.get('/', (req, res) => {
  */
 router.post('/', (req, res) => {
   // POST route code here
-  const queryText = `INSERT INTO "weekly_history" ("user_id" , "prayer_id", "mosque", "date") VALUES ($1 , $2, $3, $4)`;
-  pool.query(queryText , [req.user.id, req.body.prayer_id , req.body.mosque, req.body.date])
+  const queryText = `INSERT INTO weekly_prayers  ("user_id", "fajr", "dhuhr", "asr", "magrib", "isha")
+  VALUES($1,$2,$3,$4,$5,$6);`;
+  pool.query(queryText , [req.user.id, req.body.fajr , req.body.dhuhr, req.body.asr, req.body.magrib, req.body.isha])
   .then(result => {
     res.send(result.rows)
   }).catch(err => {
