@@ -1,18 +1,20 @@
 import react from "react";
 import { useDispatch } from "react-redux";
+import {useHistory} from 'react-router-dom'
 
 function weeklyHistory({prayer}) {
 	console.log("weekly history", prayer);
 
     const dispatch = useDispatch();
+    const history = useHistory();
 
     const handleEdit = () => {
 
         dispatch({
-            type:'EDDIT_HISTORY',
-            payload: prayer.id
+            type:'EDIT_HISTORY',
+            payload: prayer
         })
-
+        history.push("/prayerform")
 
     }
     const handleDelete = () => {
@@ -41,7 +43,7 @@ function weeklyHistory({prayer}) {
 							<td>{(prayer.date).toString()}</td>
 							<td><button onClick={handleEdit}>EDIT</button></td>
 							<td><button onClick={ handleDelete } >DELETE</button></td>
-					</tr>
+			</tr>
 		</>
 	);
 }

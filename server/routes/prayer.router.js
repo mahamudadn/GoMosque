@@ -26,14 +26,47 @@ router.get('/', (req, res) => {
  */
 router.post('/', (req, res) => {
   // POST route code here
+  const {id,
+    fajr,
+    dhuhr,
+    asr,
+    magrib,
+    isha,} = req.body
   const queryText = `INSERT INTO weekly_prayers  ("user_id", "fajr", "dhuhr", "asr", "magrib", "isha")
   VALUES($1,$2,$3,$4,$5,$6);`;
-  pool.query(queryText , [req.user.id, req.body.fajr , req.body.dhuhr, req.body.asr, req.body.magrib, req.body.isha])
+  pool.query(queryText , [id,
+    fajr,
+    dhuhr,
+    asr,
+    magrib,
+    isha,])
   .then(result => {
     res.send(result.rows)
   }).catch(err => {
     console.log('Error in POST /prayer' , err)
   })
+});
+
+router.put('/:eddit', (req, res) => {
+  // req.body
+  idToEddit = req.body.id
+
+
+  const queryText = `
+    UPDATE "weekly_prayers" 
+    SET "fajr" = $1, "dhuhr" = $2,  "asr" = $3,
+    WHERE "id" = ${idToEddit};
+    `
+ pool.query(queryText, idToEddit)
+  .then( result => {
+    console.log(`eddited prayer ${idToEddit} `);
+    res.send(200)
+  })
+  .catch(error => {
+    console.log('Error in edditing prayer', error);
+    res.sendStatus(500)
+  })
+  // req.body should contain a category_id to add to this favorite image
 });
 
 

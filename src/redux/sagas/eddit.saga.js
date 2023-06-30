@@ -3,7 +3,7 @@ import {put, takeLatest} from 'redux-saga/effects';
 
 function* editHistory(action) {
     try {
-        yield axios.put(`api/prayer/${action.payload}`)
+        yield axios.put(`api/prayer/${action.payload.id}`)
         console.log('edditing the prayer history', action);
         yield put ({ type:'FETCH_HISTORY',
         
