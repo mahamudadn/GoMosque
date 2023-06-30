@@ -1,0 +1,21 @@
+    .prayer-form {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 300px;
+    }
+    
+    .select-wrapper {
+        margin-bottom: 10px;
+    }
+    
+    .checkbox-label {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    
+    input[type="checkbox"] {
+        margin-left: 5px;
+    }
+    

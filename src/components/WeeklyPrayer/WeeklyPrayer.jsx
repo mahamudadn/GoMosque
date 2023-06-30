@@ -45,11 +45,7 @@ function weeklyPrayer() {
 					{/* <PrayerForm />
                     <p>All of the prayers can be seen here.</p> */}
 					{history?.map((prayer) => (
-						
-
-						
-						    <WeeklyHistory key={prayer.id} prayer={prayer}/>
-						
+						<WeeklyHistory key={prayer.id} prayer={prayer} />
 					))}
 				</tbody>
 			</table>
