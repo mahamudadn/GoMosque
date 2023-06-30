@@ -36,4 +36,22 @@ router.post('/', (req, res) => {
   })
 });
 
+
+//Delete
+router.delete('/:id', (req, res) => {
+  const queryText = `DELETE FROM "weekly_prayer" WHERE "id"=$1`
+  pool.query(queryText,[req.params.id/1])
+  .then(() => {
+    res.sendStatus(200);
+  })
+  .catch(error => {
+    console.log('error deleting picture', error);
+    res.sendStatus(200);
+  })
+  
+});
+
+
+
+
 module.exports = router;
