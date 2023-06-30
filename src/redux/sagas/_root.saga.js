@@ -5,6 +5,7 @@ import userSaga from './user.saga';
 import historySaga from './history.saga';
 import postPryer from './post.prayer.saga';
 import deleteSaga from './delete.saga';
+import edditSaga from './eddit.saga';
 
 
 
@@ -22,7 +23,8 @@ export default function* rootSaga() {
     userSaga(),
     historySaga(),
     postPryer(),
-    deleteSaga()
+    deleteSaga(),
+    edditSaga()
 
 
   ]);

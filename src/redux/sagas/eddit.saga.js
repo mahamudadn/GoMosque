@@ -9,7 +9,7 @@ function* editHistory(action) {
         
         })}
         catch(err) {
-            console.log('error deleting prayer hitory', err);
+            console.log('error edditing prayer hitory', err);
         }
 }
 

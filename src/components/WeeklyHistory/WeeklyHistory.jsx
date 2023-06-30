@@ -6,7 +6,12 @@ function weeklyHistory({prayer}) {
 
     const dispatch = useDispatch();
 
-    const handleEdit = () =>{
+    const handleEdit = () => {
+
+        dispatch({
+            type:'EDDIT_HISTORY',
+            payload: prayer.id
+        })
 
 
     }
