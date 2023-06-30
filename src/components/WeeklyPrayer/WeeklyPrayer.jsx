@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import WeeklyHistory from "../WeeklyHistory/WeeklyHistory";
 import "./WeeklyPrayer.css";
+import Container from '@mui/material/Container';
 
 function weeklyPrayer() {
 	const history = useSelector((store) => store.history);
@@ -13,21 +14,12 @@ function weeklyPrayer() {
 		console.log(history);
 	}, []);
 
-	// const daysOfTheWeek = [
-	// 	"Monday",
-	// 	"Tuesday",
-	// 	"Wednesday",
-	// 	"Thursday",
-	// 	"Friday",
-	// 	"Saturday",
-	// 	"Sunday",
-	// ];
 
 	return (
-		<>
-			<h2>DIALY PRAYERS</h2>
+		<Container maxWidth="sm" >
+			<h2 className="prayer_hisory">PRAYERS HISTORY</h2>
 
-			<table>
+			<table className="weekly-prayer">
 				<thead>
 					<tr>
 						<th>Fajr</th>
@@ -49,7 +41,7 @@ function weeklyPrayer() {
 					))}
 				</tbody>
 			</table>
-		</>
+		</Container>
 	);
 }
 

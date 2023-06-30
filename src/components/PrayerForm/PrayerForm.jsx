@@ -1,9 +1,12 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector, } from "react-redux";
 import { useState } from "react";
 import "./PrayerForm.css";
+import {Container } from '@mui/material';
+import { useHistory } from "react-router-dom";
 
 function prayerForm() {
 	const dispatch = useDispatch();
+	const history = useHistory();
 	// const [user_id, setUser_Id] = useState("");
 	// const [prayer_id, setPrayer_Id] = useState(0);
 	// const [mosque, setMosque] = useState(false);
@@ -22,7 +25,7 @@ function prayerForm() {
 	//Function for adding
 	const addPrayer = (event) => {
 		event.preventDefault();
-		const history = {
+		const historyObj = {
 			id: user.id,
 			fajr: fajr,
 			dhuhr: dhuhr,
@@ -32,17 +35,14 @@ function prayerForm() {
 		};
 		dispatch({
 			type: "POST_PRAYER",
-			payload: history,
+			payload: historyObj,
 		});
-		setFajr(!fajr);
-		setDhuhr(!dhuhr);
-		setAsr(!asr);
-		setMagrib(!magrib);
-		setIsha(!isha);
+        
+        history.push('/weeklyprayer')
 	};
 	console.log(fajr);
 	return (
-		<>
+		<Container maxWidth="xs" >
 			<form onSubmit={addPrayer}>
 				<table className="prayer-form-table">
 					<thead>
@@ -115,11 +115,15 @@ function prayerForm() {
 						</tr>
 					</tbody>
 				</table>
-				<button className="add-prayer-button" type="submit">
+                
+                
+                
+				<button className="add-prayer-button" type={'submit'}>
 					ADD TO PRAYERS
 				</button>
+              
 			</form>
-		</>
+		</Container>
 	);
 }
 

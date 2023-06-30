@@ -47,17 +47,24 @@ router.post('/', (req, res) => {
   })
 });
 
-router.put('/:eddit', (req, res) => {
+router.put('/:id', (req, res) => {
   // req.body
-  idToEddit = req.body.id
+  const {
+    fajr,
+    dhuhr,
+    asr,
+    magrib,
+    isha,} = req.body
+    
+  const idToEddit = req.params.id
 
 
   const queryText = `
     UPDATE "weekly_prayers" 
-    SET "fajr" = $1, "dhuhr" = $2,  "asr" = $3,
-    WHERE "id" = ${idToEddit};
+    SET "fajr" = $1, "dhuhr" = $2,  "asr" = $3, "magrib"= $4, "isha" = $5
+    WHERE "id" = $6;
     `
- pool.query(queryText, idToEddit)
+ pool.query(queryText, [fajr, dhuhr, asr, magrib, isha, idToEddit])
   .then( result => {
     console.log(`eddited prayer ${idToEddit} `);
     res.send(200)
