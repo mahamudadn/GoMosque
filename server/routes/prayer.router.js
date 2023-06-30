@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
                       ORDER BY date DESC;`;
   pool.query(queryText, [req.user.id])
   .then(result => {
-    console.log('djflsakjf el=>>>>>',result.rows);
+    // console.log('djflsakjf el=>>>>>',result.rows);
     res.send(result.rows);
   })
   .catch(err => {
@@ -39,13 +39,14 @@ router.post('/', (req, res) => {
 
 //Delete
 router.delete('/:id', (req, res) => {
-  const queryText = `DELETE FROM "weekly_prayer" WHERE "id"=$1`
-  pool.query(queryText,[req.params.id/1])
+
+  const queryText = `DELETE  FROM "weekly_prayers" WHERE "id"=$1`
+  pool.query(queryText,[req.params.id])
   .then(() => {
     res.sendStatus(200);
   })
   .catch(error => {
-    console.log('error deleting picture', error);
+    console.log('error deleting prayer', error);
     res.sendStatus(200);
   })
   

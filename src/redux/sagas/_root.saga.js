@@ -4,6 +4,7 @@ import registrationSaga from './registration.saga';
 import userSaga from './user.saga';
 import historySaga from './history.saga';
 import postPryer from './post.prayer.saga';
+import deleteSaga from './delete.saga';
 
 
 
@@ -20,7 +21,9 @@ export default function* rootSaga() {
     registrationSaga(),
     userSaga(),
     historySaga(),
-    postPryer()
+    postPryer(),
+    deleteSaga()
+
 
   ]);
 }

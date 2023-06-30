@@ -1,12 +1,21 @@
 import react from "react";
+import { useDispatch } from "react-redux";
 
 function weeklyHistory({prayer}) {
 	console.log("weekly history", prayer);
+
+    const dispatch = useDispatch();
+
     const handleEdit = () =>{
-        
+
 
     }
-    const handleDelete = () =>{
+    const handleDelete = () => {
+        console.log(prayer.id);
+        dispatch({
+            type: 'DELETE_HISTORY',
+            payload:prayer.id
+        })
 
     }
     

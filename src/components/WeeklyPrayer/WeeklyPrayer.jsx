@@ -13,15 +13,15 @@ function weeklyPrayer() {
 		console.log(history);
 	}, []);
 
-	const daysOfTheWeek = [
-		"Monday",
-		"Tuesday",
-		"Wednesday",
-		"Thursday",
-		"Friday",
-		"Saturday",
-		"Sunday",
-	];
+	// const daysOfTheWeek = [
+	// 	"Monday",
+	// 	"Tuesday",
+	// 	"Wednesday",
+	// 	"Thursday",
+	// 	"Friday",
+	// 	"Saturday",
+	// 	"Sunday",
+	// ];
 
 	return (
 		<>

@@ -21,12 +21,7 @@ function prayerForm() {
     }
 
     
-    // const addPrayer = (event)
-    //     event.preventDefault();
-    //   
-    //     console.log(user_id, prayer_id,mosque,);
-    //     console.log(history);
-    //     dispatch({ type: "POST_PRAYER", payload:history})
+
  const date = new Date().toJSON();
     const addPrayer = (event) => {
         event.preventDefault();
@@ -49,27 +44,6 @@ console.log(fajr);
 return (
         <>
         <form onSubmit={addPrayer}>
-
-{/* <label>
-    <p>Fajr</p>
-    <input  type="checkbox" onChange={handleChange}/>
-</label>
-<label>
-    <p>Dhuhr</p>
-    <input  type="checkbox" onChange={handleChange}/>
-</label>
-<label>
-    <p>Asr</p>
-    <input  type="checkbox" onChange={handleChange}/>
-</label>
-<label>
-    <p>Magrib</p>
-    <input  type="checkbox" onChange={handleChange}/>
-</label>
-<label>
-    <p>Isha</p>
-   
-</label> */}
 
 
     
