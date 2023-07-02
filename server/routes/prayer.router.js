@@ -9,7 +9,7 @@ router.get('/', (req, res) => {
   // GET route code here
   const queryText = `SELECT * FROM  "weekly_prayers"
                       WHERE "user_id" = $1
-                      ORDER BY "date" ASC;`;
+                      ORDER BY "id" ASC;`;
                       
   pool.query(queryText, [req.user.id])
   .then(result => {
