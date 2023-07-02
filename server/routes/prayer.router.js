@@ -10,6 +10,7 @@ router.get('/', (req, res) => {
   const queryText = `SELECT * FROM  "weekly_prayers"
                       WHERE "user_id" = $1
                       ORDER BY date DESC;`;
+                      
   pool.query(queryText, [req.user.id])
   .then(result => {
     // console.log('djflsakjf el=>>>>>',result.rows);
@@ -39,11 +40,12 @@ router.post('/', (req, res) => {
     dhuhr,
     asr,
     magrib,
-    isha,])
+    isha])
   .then(result => {
-    res.send(result.rows)
+    res.sendStatus(200);
   }).catch(err => {
     console.log('Error in POST /prayer' , err)
+    res.sendStatus(500);
   })
 });
 
@@ -55,7 +57,7 @@ router.put('/:id', (req, res) => {
     asr,
     magrib,
     isha,} = req.body
-    
+
   const idToEddit = req.params.id
 
 
@@ -67,7 +69,7 @@ router.put('/:id', (req, res) => {
  pool.query(queryText, [fajr, dhuhr, asr, magrib, isha, idToEddit])
   .then( result => {
     console.log(`eddited prayer ${idToEddit} `);
-    res.send(200)
+    res.sendStatus(200)
   })
   .catch(error => {
     console.log('Error in edditing prayer', error);

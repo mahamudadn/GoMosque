@@ -1,7 +1,7 @@
-import { useDispatch, useSelector, } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 import "./PrayerForm.css";
-import {Container } from '@mui/material';
+import { Container } from "@mui/material";
 import { useHistory } from "react-router-dom";
 
 function prayerForm() {
@@ -34,15 +34,16 @@ function prayerForm() {
 			isha: isha,
 		};
 		dispatch({
+			///.,mnbvj
 			type: "POST_PRAYER",
 			payload: historyObj,
 		});
-        
-        history.push('/weeklyprayer')
+
+		history.push("/weeklyprayer");
 	};
 	console.log(fajr);
 	return (
-		<Container maxWidth="xs" >
+		<Container maxWidth="xs">
 			<form onSubmit={addPrayer}>
 				<table className="prayer-form-table">
 					<thead>
@@ -115,13 +116,10 @@ function prayerForm() {
 						</tr>
 					</tbody>
 				</table>
-                
-                
-                
-				<button className="add-prayer-button" type={'submit'}>
+
+				<button className="add-prayer-button" type={"submit"}>
 					ADD TO PRAYERS
 				</button>
-              
 			</form>
 		</Container>
 	);
