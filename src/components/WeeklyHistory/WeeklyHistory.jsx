@@ -105,25 +105,34 @@ function weeklyHistory({ prayer }) {
 					</td>
 					<td>{prayer.date.toString()}</td>
 					<td>
-						<button className="edit-button" onClick={handleSave}>SAVE</button>
+						<button className="edit-button" onClick={handleSave}>
+							SAVE
+						</button>
 					</td>
 					<td>
-						<button className="delete-button" onClick={handleDelete}>DELETE</button>
+						<button className="delete-button" onClick={handleDelete}>
+							DELETE
+						</button>
 					</td>
 				</tr>
 			) : (
 				<tr className="weekly-history-row">
-					<td>{prayer.fajr.toString()}</td>
-					<td>{prayer.dhuhr.toString()} </td>
-					<td>{prayer.asr.toString()} </td>
-					<td>{prayer.magrib.toString()} </td>
-					<td>{prayer.isha.toString()} </td>
-					<td>{prayer.date.toString()}</td>
+					<td>{prayer.fajr ? "mosque" : "elsewhere"}</td>
+					<td>{prayer.dhuhr ? "mosque" : "elsewhere"} </td>
+					<td>{prayer.asr ? "mosque" : "elsewhere"} </td>
+					<td>{prayer.magrib ? "mosque" : "elsewhere"} </td>
+					<td>{prayer.isha ? "mosque" : "elsewhere"}</td>
+					<td>{prayer.date.slice(0, 10)}</td>{" "}
+					{/* deletes extra digits in the date */}
 					<td>
-						<button className= "edit-button" onClick={handleEdit}>EDIT</button>
+						<button className="edit-button" onClick={handleEdit}>
+							EDIT
+						</button>
 					</td>
 					<td>
-						<button className="delete-button" onClick={handleDelete}>DELETE</button>
+						<button className="delete-button" onClick={handleDelete}>
+							DELETE
+						</button>
 					</td>
 				</tr>
 			)}
