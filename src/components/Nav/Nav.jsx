@@ -35,9 +35,9 @@ function Nav() {
               Weekly Prayers
             </Link>           
 
-            <Link className="navLink" to="/info">
+            {/* <Link className="navLink" to="/info">
               Info Page
-            </Link>
+            </Link> */}
 
             <LogOutButton className="navLink" />
           </>
