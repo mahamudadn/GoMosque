@@ -1,31 +1,27 @@
-    /* WeeklyPrayer.css */
-    /* WeeklyPrayer.css */
-
-.prayer_history {
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: rgb(10, 233, 129);
-    }
-
-    .weekly-prayer {
-        width: 100%;
-        border-collapse: collapse;
-    }
-    
-    .weekly-prayer th,
-    .weekly-prayer td {
-        padding: 10px;
-        text-align: center;
-        border: 1px solid #ccc;
-    }
-    
-    .weekly-prayer thead {
-        background-color: #f2f2f2;
-    }
-    
-    .weekly-prayer h2 {
-        font-size: 24px;
-        margin-bottom: 20px;
-    }
-    
-        
+   /* Styling the table */
+   .weekly-prayer {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  /* Styling the table header */
+  .table-head th {
+    background-color: rgb(123, 18, 222);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-family: monospace;
+  }
+  
+  /* Styling the table data rows */
+  .weekly-prayer tbody tr:nth-child(even) td {
+    background-color: rgb(214, 222, 211);
+    color: rgb(4, 1, 1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Styling the table data cells */
+  .weekly-prayer td {
+    text-align: center;
+    padding: 10px;
+  }

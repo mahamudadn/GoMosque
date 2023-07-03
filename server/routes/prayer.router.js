@@ -13,7 +13,7 @@ router.get('/', (req, res) => {
                       
   pool.query(queryText, [req.user.id])
   .then(result => {
-    // console.log('djflsakjf el=>>>>>',result.rows);
+  
     res.send(result.rows);
   })
   .catch(err => {

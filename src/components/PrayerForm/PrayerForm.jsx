@@ -7,9 +7,6 @@ import { useHistory } from "react-router-dom";
 function prayerForm() {
 	const dispatch = useDispatch();
 	const history = useHistory();
-	// const [user_id, setUser_Id] = useState("");
-	// const [prayer_id, setPrayer_Id] = useState(0);
-	// const [mosque, setMosque] = useState(false);
 	const [fajr, setFajr] = useState(false);
 	const [dhuhr, setDhuhr] = useState(false);
 	const [asr, setAsr] = useState(false);
@@ -34,7 +31,7 @@ function prayerForm() {
 			isha: isha,
 		};
 		dispatch({
-			///.,mnbvj
+			
 			type: "POST_PRAYER",
 			payload: historyObj,
 		});
