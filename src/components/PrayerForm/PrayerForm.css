@@ -29,11 +29,10 @@
     
     .add-prayer-button {
         padding: 10px 20px;
-        background-color: #802ab5;
+        background-color: #4caf50;
         color: #fff;
         border: none;
         cursor: pointer;
-        border-radius: 30%;
     }
     
     .add-prayer-button:hover {

@@ -39,7 +39,7 @@ function prayerForm() {
 
 		history.push("/weeklyprayer"); // Navigate to "/weeklyprayer" route
 	};
-	console.log(fajr);
+	// console.log(fajr);
 	return (
 		<Container maxWidth="xs">
 			<form onSubmit={addPrayer}>
@@ -111,7 +111,9 @@ function prayerForm() {
 									onChange={(e) => handleChange(e.target.value)}
 								/>
 							</td>
+
 						</tr>
+                
 					</tbody>
 				</table>
 

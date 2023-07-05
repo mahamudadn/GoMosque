@@ -1,8 +1,9 @@
-import react, { useState } from "react";
+import react, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 
 import "./WeeklyHistory.css";
+import PrayerChart from "../PrayerChart/PrayerChart";
 
 function weeklyHistory({ prayer }) {
 	console.log("weekly history", prayer);
@@ -15,10 +16,32 @@ function weeklyHistory({ prayer }) {
 	const [asr, setAsr] = useState(prayer.asr);
 	const [magrib, setMagrib] = useState(prayer.magrib);
 	const [isha, setIsha] = useState(prayer.isha);
+	const [totalMosques, setTotalMosques] = useState(prayer.totalMosques);
+	const [mosqueCount, setMosqueCount] = useState(
+		Number(prayer.fajr) +
+			Number(prayer.dhuhr) +
+			Number(prayer.asr) +
+			Number(prayer.magrib) +
+			Number(prayer.isha)
+	);
+	useEffect(() => {
+		// Update mosqueCount whenever fajr, dhuhr, asr, magrib, or isha change
+		const newMosqueCount =
+			Number(fajr) +
+			Number(dhuhr) +
+			Number(asr) +
+			Number(magrib) +
+			Number(isha);
+		setMosqueCount(newMosqueCount);
+	}, [fajr, dhuhr, asr, magrib, isha]);
 
 	const handleChange = (e) => {
-		console.log(e);
+		if (e && e.target) {
+			const value = e.target.value;
+			setTotalMosques(value);
+		}
 	};
+
 	const handleClick = (value) => {
 		console.log("before change", value);
 
@@ -38,6 +61,7 @@ function weeklyHistory({ prayer }) {
 			asr: asr,
 			magrib: magrib,
 			isha: isha,
+			totalMosques: totalMosques,
 		};
 		setEdit(!edit);
 
@@ -48,6 +72,21 @@ function weeklyHistory({ prayer }) {
 	};
 	const handleDelete = () => {
 		console.log(prayer.id);
+
+		// Prompt the user for confirmation
+		const confirmDelete = window.confirm(
+			"Are you sure you want to delete this item?"
+		);
+
+		if (confirmDelete) {
+			// Perform the delete operation
+			// ...
+			// Show success message
+			window.alert("Item deleted successfully!");
+		} else {
+			// Cancel or ignore the deletion
+		}
+
 		dispatch({
 			type: "DELETE_HISTORY",
 			payload: prayer.id,
@@ -56,6 +95,7 @@ function weeklyHistory({ prayer }) {
 
 	return (
 		<>
+			{/* <div className="table-container"> */}
 			{edit ? (
 				<tr className="weekly-history-row">
 					<td>
@@ -64,7 +104,7 @@ function weeklyHistory({ prayer }) {
 							value={fajr}
 							type="checkbox"
 							onClick={() => setFajr(!fajr)}
-							onChange={(e) => handleChange(e.target.value)}
+							onChange={handleChange}
 						/>
 					</td>
 					<td>
@@ -73,7 +113,7 @@ function weeklyHistory({ prayer }) {
 							value={dhuhr}
 							type="checkbox"
 							onClick={() => setDhuhr(!dhuhr)}
-							onChange={(e) => handleChange(e.target.value)}
+							onChange={handleChange}
 						/>
 					</td>
 					<td>
@@ -82,7 +122,7 @@ function weeklyHistory({ prayer }) {
 							value={asr}
 							type="checkbox"
 							onClick={() => setAsr(!asr)}
-							onChange={(e) => handleChange(e.target.value)}
+							onChange={handleChange}
 						/>
 					</td>
 					<td>
@@ -91,7 +131,7 @@ function weeklyHistory({ prayer }) {
 							value={magrib}
 							type="checkbox"
 							onClick={() => setMagrib(!magrib)}
-							onChange={(e) => handleChange(e.target.value)}
+							onChange={handleChange}
 						/>
 					</td>
 					<td>
@@ -100,36 +140,56 @@ function weeklyHistory({ prayer }) {
 							value={isha}
 							type="checkbox"
 							onClick={() => setIsha(!isha)}
-							onChange={(e) => handleChange(e.target.value)}
+							onChange={handleChange}
 						/>
 					</td>
+					<td>{mosqueCount}</td>
 					<td>{prayer.date.toString()}</td>
 					<td>
-						<button className="edit-button" onClick={handleSave}>SAVE</button>
+						<button className="edit-button" onClick={handleSave}>
+							SAVE
+						</button>
 					</td>
 					<td>
-						<button className="delete-button" onClick={handleDelete}>DELETE</button>
+						<button className="delete-button" onClick={handleDelete}>
+							DELETE
+						</button>
 					</td>
 				</tr>
 			) : (
 				<tr className="weekly-history-row">
-                    
-					<td>{prayer.fajr ? 'mosque' : 'elsewhere'}</td>
-					<td>{prayer.dhuhr ? 'mosque' : 'elsewhere'} </td>
-					<td>{prayer.asr ? 'mosque' : 'elsewhere'} </td>
-					<td>{prayer.magrib ? 'mosque' : 'elsewhere'} </td>
-					<td>{prayer.isha ? 'mosque' : 'elsewhere'}</td>
-					<td>{prayer.date.slice(0,10)}</td> 
-                   
 					<td>
-						<button className= "edit-button" onClick={handleEdit}>EDIT</button>
+						{" "}
+						<div className="chart-container">
+							<PrayerChart data={[fajr, dhuhr, asr, magrib, isha]} />
+						</div>
 					</td>
-                    
+					<td>{prayer.fajr ? "mosque" : "elsewhere"}</td>
+					<td>{prayer.dhuhr ? "mosque" : "elsewhere"} </td>
+					<td>{prayer.asr ? "mosque" : "elsewhere"} </td>
+					<td>{prayer.magrib ? "mosque" : "elsewhere"} </td>
+					<td>{prayer.isha ? "mosque" : "elsewhere"}</td>
+					<td>{mosqueCount}</td>
+
+					<td>{prayer.date.slice(0, 10)}</td>
+					{/*  */}
 					<td>
-						<button className="delete-button" onClick={handleDelete}>DELETE</button>
+						<button className="edit-button" onClick={handleEdit}>
+							EDIT
+						</button>
+					</td>
+
+					<td>
+						<button className="delete-button" onClick={handleDelete}>
+							DELETE
+						</button>
 					</td>
 				</tr>
 			)}
+			{/* </div> */}
+			{/* <div className="chart-container">
+				<PrayerChart data={[fajr, dhuhr, asr, magrib, isha]} />
+			</div> */}
 		</>
 	);
 }
