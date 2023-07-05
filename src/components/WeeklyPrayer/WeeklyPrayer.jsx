@@ -17,6 +17,7 @@ function weeklyPrayer() {
 	return (
 		<Container maxWidth="sm">
 			<h2 className="prayer_hisory">PRAYERS HISTORY</h2>
+            
 
 			<table className="weekly-prayer">
 				<thead>
@@ -26,6 +27,7 @@ function weeklyPrayer() {
 						<th>Asr</th>
 						<th>Magrib</th>
 						<th>Isha</th>
+                        <th>Total</th>
 						<th>Day</th>
 						<th>Edit</th>
 						<th>Delete</th>

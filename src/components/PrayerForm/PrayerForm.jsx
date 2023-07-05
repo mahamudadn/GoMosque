@@ -5,8 +5,9 @@ import { Container } from "@mui/material";
 import { useHistory } from "react-router-dom";
 
 function prayerForm() {
-	const dispatch = useDispatch();
-	const history = useHistory();
+	const dispatch = useDispatch(); // Hook to dispatch actions to Redux store
+	const history = useHistory(); // Hook to manage navigation
+    // State variable for prayers checkbox
 	const [fajr, setFajr] = useState(false);
 	const [dhuhr, setDhuhr] = useState(false);
 	const [asr, setAsr] = useState(false);
@@ -16,12 +17,12 @@ function prayerForm() {
 	const handleChange = (e) => {
 		console.log(e);
 	};
-	const user = useSelector((store) => store.user);
+	const user = useSelector((store) => store.user);  // Accessing the 'user' object from Redux store
 
-	// const date = new Date().toJSON();
-	//Function for adding
+
+    // function that is called when the form is submitted
 	const addPrayer = (event) => {
-		event.preventDefault();
+		event.preventDefault(); // Prevent default form submission behavior
 		const historyObj = {
 			id: user.id,
 			fajr: fajr,
@@ -32,13 +33,13 @@ function prayerForm() {
 		};
 		dispatch({
 			
-			type: "POST_PRAYER",
-			payload: historyObj,
+			type: "POST_PRAYER", // Dispatching an action of type 'POST_PRAYER'
+			payload: historyObj, // Payload with the 'historyObj' object
 		});
 
-		history.push("/weeklyprayer");
+		history.push("/weeklyprayer"); // Navigate to "/weeklyprayer" route
 	};
-	console.log(fajr);
+	// console.log(fajr);
 	return (
 		<Container maxWidth="xs">
 			<form onSubmit={addPrayer}>
@@ -110,7 +111,9 @@ function prayerForm() {
 									onChange={(e) => handleChange(e.target.value)}
 								/>
 							</td>
+
 						</tr>
+                
 					</tbody>
 				</table>
 

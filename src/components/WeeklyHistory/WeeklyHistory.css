@@ -1,92 +1,104 @@
-        /* WeeklyHistory.css */
+/* styles.css */
 
-        /* Button styles */
+/* WeeklyPrayer.css */
 
-        .weekly-history-row {
-            background-color: #f2f2f2;
-            border-radius: 20%;
-            /* Add other row styles */}
-        .edit-button,
-        .save-button,
-        .delete-button {
-        background-color: #3498db;
-        color: white;
-        border: none;
-        padding: 8px 16px;
-        border-radius: 4px;
-        font-weight: bold;
-        cursor: pointer;
-        border-radius: 30%;
-        }
-
-        
-        .delete-button {
-        background-color: #a934db;
-        color: white;
-        border: none;
-        padding: 8px 16px;
-        border-radius: 4px;
-        font-weight: bold;
-        cursor: pointer;
-        border-radius: 30%;
-        }
-        .edit-button:hover,
-        .save-button:hover,
-        .delete-button:hover {
-        background-color: #6b1ac2;
-        }
-        .delete-button:hover {
-            background-color: #8c0a0a;
-            }
-
-        /* Checkbox styles */
-        .prayer-checkbox {
-        /* Add your checkbox styles here */
-        }
-
-        /* Table row styles */
-        .weekly-history-row {
-        /* Add your table row styles here */
-        }
-    /* WeeklyHistory.css */
-
-    .prayer-checkbox {
-        display: inline-flex;
-        cursor: pointer;
-        position: relative;
-    }
-    
-    .prayer-checkbox > input {
-        height: 25px;
-        width: 25px;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        -o-appearance: none;
-        appearance: none;
-        border: 1px solid #34495E;
-        border-radius: 4px;
-        outline: none;
-        transition-duration: 0.3s;
-        background-color: #41B883;
-        cursor: pointer;
-    }
-    
-    .prayer-checkbox > input:checked {
-        border: 1px solid #41B883;
-        background-color: #34495E;
-    }
-    
-    .prayer-checkbox > input:checked + span::before {
-        content: '\2713';
-        display: block;
-        text-align: center;
-        color: #41B883;
-        position: absolute;
-        left: 0.7rem;
-        top: 0.2rem;
-    }
-    
-    .prayer-checkbox > input:active {
-        border: 2px solid #34495E;
-    }
-    
+.container {
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .table-container {
+    margin-top: 20px;
+  }
+  
+  .prayer-history {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .weekly-prayer {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .table-head {
+    background-color: #f5f5f5;
+  }
+  
+  .table-head th {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .weekly-prayer td {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .weekly-prayer td:first-child {
+    width: 80px;
+  }
+  
+  .weekly-prayer td:nth-child(6) {
+    width: 60px;
+  }
+  
+  .weekly-prayer td:last-child {
+    width: 80px;
+  }
+  
+  .weekly-prayer td:last-child button {
+    margin-right: 5px;
+  }
+  
+  .weekly-prayer td:last-child button:last-child {
+    margin-right: 0;
+  }
+  
+  
+  .weekly-history-row {
+    /* Styles for the table rows */
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  .prayer-checkbox {
+    /* Styles for the prayer checkboxes */
+    margin-right: 5px;
+  }
+  
+  .edit-button {
+    /* Styles for the edit button */
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .delete-button {
+    /* Styles for the delete button */
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .chart-container {
+    /* Styles for the chart container element */
+    margin-top: 20px;
+  }
+  
+  /* Add any additional styles as needed */
+  
