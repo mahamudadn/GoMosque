@@ -73,25 +73,15 @@ function weeklyHistory({ prayer }) {
 	const handleDelete = () => {
 		console.log(prayer.id);
 
-		// // Prompt the user for confirmation
-		// const confirmDelete = window.confirm(
-		// 	"Are you sure you want to delete this item?"
-		// );
 
-		// if (confirmDelete) {
-		// 	// Perform the delete operation
-		// 	// ...
-		// 	// Show success message
-		// 	window.alert("Item deleted successfully!");
-		// } else {
-		// 	// Cancel or ignore the deletion
-		// }
 
 		dispatch({
 			type: "DELETE_HISTORY",
 			payload: prayer.id,
 		});
 	};
+
+
 
 	return (
 		<>
@@ -190,6 +180,7 @@ function weeklyHistory({ prayer }) {
 			<div className="chart-container">
 				<PrayerChart data={[fajr, dhuhr, asr, magrib, isha]} />
 			</div>
+            
 		</>
 	);
 }

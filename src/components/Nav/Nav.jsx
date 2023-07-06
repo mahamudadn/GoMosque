@@ -38,9 +38,9 @@ function Nav() {
 						<Link className="navLink" to="/prayerbar">
 							Chart
 						</Link>
-            {/* <Link className="navLink" to="/prayerchart">
-							Prayer Chart
-						</Link> */}
+            <Link className="navLink" to="/historybar">
+							Bar
+						</Link>
 
 						{/* {/* <Link className="navLink" to="/info">
               Info Page

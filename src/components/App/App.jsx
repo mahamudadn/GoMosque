@@ -25,6 +25,7 @@ import WeeklyPrayer from "../WeeklyPrayer/WeeklyPrayer";
 import PrayerBar from "../PrayerBar/PrayerBar";
 
 import "./App.css";
+import HistoryBar from "../HistoyBar/HistoryBar";
 
 function App() {
 	const dispatch = useDispatch();
@@ -101,6 +102,14 @@ function App() {
 						path="/prayerbar"
 					>
 						<PrayerBar />
+					</ProtectedRoute>
+
+					<ProtectedRoute
+						// logged in shows InfoPage else shows LoginPage
+						exact
+						path="/historybar"
+					>
+						<HistoryBar />
 					</ProtectedRoute>
 
 					<Route exact path="/login">
