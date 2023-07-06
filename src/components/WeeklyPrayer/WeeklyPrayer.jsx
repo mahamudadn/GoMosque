@@ -15,19 +15,18 @@ function weeklyPrayer() {
 	}, []);
 
 	return (
-		<Container maxWidth="sm">
+		<div className="prayer-table">
 			<h2 className="prayer_hisory">PRAYERS HISTORY</h2>
 
 			<table className="weekly-prayer">
 				<thead>
-					<tr>
+					<tr className="table-head">
 						<th>Fajr</th>
-                        <th>Fajr</th>
 						<th>Dhuhr</th>
 						<th>Asr</th>
 						<th>Magrib</th>
 						<th>Isha</th>
-						<th>Total</th>
+                        <th>Mosque</th>
 						<th>Day</th>
 						<th>Edit</th>
 						<th>Delete</th>
@@ -35,14 +34,12 @@ function weeklyPrayer() {
 				</thead>
 
 				<tbody>
-					{/* <PrayerForm />
-                    <p>All of the prayers can be seen here.</p> */}
 					{history?.map((prayer) => (
 						<WeeklyHistory key={prayer.id} prayer={prayer} />
 					))}
 				</tbody>
 			</table>
-		</Container>
+            </div>
 	);
 }
 
