@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import LogOutButton from "../LogOutButton/LogOutButton";
 import "./Nav.css";
 import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
 function Nav() {
 	const user = useSelector((store) => store.user);
+  const dispatch = useDispatch();
+  useEffect(()=>{
+		dispatch({type: 'FETCH_WEEKLY'});
+	}, []);
 
 	return (
 		<div className="nav">

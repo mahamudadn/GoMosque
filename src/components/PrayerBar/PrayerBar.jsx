@@ -50,7 +50,7 @@ function PrayerBar() {
 
 
 	const data = {
-		labels: [`${weekly[0].date}`, `${weekly[1].date}`, `${weekly[2].date}`, `${weekly[3].date}`, `${weekly[4].date}`, `${weekly[5].date}`, `${weekly[6].date}`],
+		labels: weekly&&[`${weekly[0]?.date}`, `${weekly[1]?.date}`, `${weekly[2]?.date}`, `${weekly[3]?.date}`, `${weekly[4]?.date}`, `${weekly[5]?.date}`, `${weekly[6]?.date}`],
 		datasets: [
 			{
 				label: "5",
