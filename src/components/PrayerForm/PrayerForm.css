@@ -15,12 +15,14 @@
     .prayer-form-table th {
         text-align: left;
         padding: 10px;
-        background-color: #f2f2f2;
+        background-color: #6922c0;
+        color: antiquewhite;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
     
     .prayer-form-table td {
-        padding: 10px;
-        border-bottom: 1px solid #ccc;
+        padding: 20px;
+        /* border-bottom: 1px solid #ccc; */
     }
     
     .prayer-form-table .prayer-checkbox {
@@ -29,10 +31,11 @@
     
     .add-prayer-button {
         padding: 10px 20px;
-        background-color: #4caf50;
+        background-color: #6922c0;
         color: #fff;
-        border: none;
+        border-radius:25%;
         cursor: pointer;
+        
     }
     
     .add-prayer-button:hover {

@@ -49,9 +49,7 @@ function PrayerBar() {
 			style={{padding: "20px", width:"70%", textAlign:"center", margin:  'auto',}}
 			
 			data={data} options={options}></Bar>
-			{/* <PrayerChart data={[fajr, dhuhr, asr, magrib, isha]} /> */}
 		</div>
-		
 	);
 }
 

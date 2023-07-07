@@ -4,6 +4,7 @@ import { useHistory } from "react-router-dom";
 
 import "./WeeklyHistory.css";
 import PrayerChart from "../PrayerChart/PrayerChart";
+// import { shallowEqual } from "react-redux";
 
 function weeklyHistory({ prayer }) {
 	console.log("weekly history", prayer);
@@ -72,8 +73,7 @@ function weeklyHistory({ prayer }) {
 	};
 	const handleDelete = () => {
 		console.log(prayer.id);
-
-
+    
 
 		dispatch({
 			type: "DELETE_HISTORY",
@@ -81,11 +81,12 @@ function weeklyHistory({ prayer }) {
 		});
 	};
 
+    
 
 
 	return (
 		<>
-			{/* <div className="table-container"> */}
+		
 			{edit ? (
 				<tr className="weekly-history-row">
 					<td>
@@ -154,11 +155,11 @@ function weeklyHistory({ prayer }) {
 							<PrayerChart data={[fajr, dhuhr, asr, magrib, isha]} />
 						</div>
 					</td> */}
-					<td>{prayer.fajr ? "mosque" : "elsewhere"}</td>
-					<td>{prayer.dhuhr ? "mosque" : "elsewhere"} </td>
-					<td>{prayer.asr ? "mosque" : "elsewhere"} </td>
-					<td>{prayer.magrib ? "mosque" : "elsewhere"} </td>
-					<td>{prayer.isha ? "mosque" : "elsewhere"}</td>
+					<td>{prayer.fajr ? "🕌" : "❌"}</td>
+					<td>{prayer.dhuhr ? "🕌" : "❌"} </td>
+					<td>{prayer.asr ? "🕌" : "❌"} </td>
+					<td>{prayer.magrib ? "🕌" : "❌"} </td>
+					<td>{prayer.isha ? "🕌" : "❌"}</td>
 					<td>{mosqueCount}</td>
 
 					<td>{prayer.date.slice(0, 10)}</td>
@@ -176,7 +177,7 @@ function weeklyHistory({ prayer }) {
 					</td>
 				</tr>
 			)}
-			{/* </div> */}
+			
 			<div className="chart-container">
 				<PrayerChart data={[fajr, dhuhr, asr, magrib, isha]} />
 			</div>

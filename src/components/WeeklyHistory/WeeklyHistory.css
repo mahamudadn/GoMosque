@@ -3,38 +3,28 @@
 /* WeeklyPrayer.css */
 
         .weekly-history-row {
-            background-color: #f2f2f2;
+            background-color: #e5dde9;
             /* position: relative;
             left: -20%; */
             /* Add other row styles */}
         .edit-button,
         .save-button,
         .delete-button {
-        background-color: #3498db;
+        background-color: #7f34db;
         color: white;
         border: none;
         padding: 8px 16px;
         border-radius: 4px;
         font-weight: bold;
         cursor: pointer;
+        border-radius: 25%;
         }
 
         .edit-button:hover,
         .save-button:hover,
         .delete-button:hover {
-        background-color: #2980b9;
+        background-color: #7311a7;
         }
-
-        /* Checkbox styles */
-        .prayer-checkbox {
-        /* Add your checkbox styles here */
-        }
-
-        /* Table row styles */
-        .weekly-history-row {
-        /* Add your table row styles here */
-        }
-    /* WeeklyHistory.css */
 
     .prayer-checkbox {
         display: inline-flex;
