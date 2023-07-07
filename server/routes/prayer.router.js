@@ -7,7 +7,7 @@ const router = express.Router();
  */
 router.get('/', (req, res) => {
   // GET route code here
-  const queryText = `SELECT * FROM  "weekly_prayers"
+  const queryText = `SELECT id, user_id, fajr, dhuhr, asr, magrib, isha, to_char(date, 'DAY Month DD, YYYY') AS date FROM  "weekly_prayers"
                       WHERE "user_id" = $1
                       ORDER BY "id" ASC;`;
                       

@@ -6,7 +6,7 @@ import historySaga from './history.saga';
 import postPryer from './post.prayer.saga';
 import deleteSaga from './delete.saga';
 import edditSaga from './eddit.saga';
-
+import weeklySaga from './weekly.saga';
 
 
 // rootSaga is the primary saga.
@@ -24,7 +24,8 @@ export default function* rootSaga() {
     historySaga(),
     postPryer(),
     deleteSaga(),
-    edditSaga()
+    edditSaga(),
+    weeklySaga()
 
 
   ]);

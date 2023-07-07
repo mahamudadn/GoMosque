@@ -27,6 +27,7 @@ function weeklyHistory({ prayer }) {
 	);
 	useEffect(() => {
 		// Update mosqueCount whenever fajr, dhuhr, asr, magrib, or isha change
+        dispatch({type: 'FETCH_WEEKLY'});
 		const newMosqueCount =
 			Number(fajr) +
 			Number(dhuhr) +

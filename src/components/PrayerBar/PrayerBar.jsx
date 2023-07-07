@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
-import PrayerChart from "../PrayerChart/PrayerChart";
+// import PrayerChart from "../PrayerChart/PrayerChart";
 
 
 
@@ -16,6 +16,10 @@ import {
 } from "chart.js";
 
 import { Bar } from "react-chartjs-2";
+import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
+
+
 
 ChartJS.register(
 	CategoryScale,
@@ -26,15 +30,32 @@ ChartJS.register(
 	Legend
 );
 
+
+
 function PrayerBar() {
+	const dispatch = useDispatch();
+	useEffect(()=>{
+		dispatch({type: 'FETCH_WEEKLY'});
+	}, []);
+	const weekly = useSelector(store => store.weeklyReducer);
+	console.log('weekly reducer', weekly)
+
+	const days = weekly.map(week => week.mosque_prayer);
+
+
 	
+	
+
+
+
+
 	const data = {
-		labels: ["Mon", "Tues", "Wend", "Thur", "fri", "sat", "sun"],
+		labels: [`${weekly[0].date}`, `${weekly[1].date}`, `${weekly[2].date}`, `${weekly[3].date}`, `${weekly[4].date}`, `${weekly[5].date}`, `${weekly[6].date}`],
 		datasets: [
 			{
 				label: "5",
 				label: "Five Prayers",
-				data: [3, 4, 5, 2, 1, 3, 4],
+				data: days,
 				backgroundColor: "green",
 				borderColor: "black",
 			
@@ -42,6 +63,7 @@ function PrayerBar() {
 		],
 	};
 	const options = {};
+	
 	return (
 		<div className="chart-container">
 			<h2 style={{ textAlign: "center", padding: "40px"}}>Prayer Chart</h2>
