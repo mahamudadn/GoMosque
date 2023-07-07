@@ -179,10 +179,10 @@ function weeklyHistory({ prayer }) {
 				</tr>
 			)}
 			
-			<div className="chart-container">
+			{/* <div className="chart-container">
 				<PrayerChart data={[fajr, dhuhr, asr, magrib, isha]} />
 			</div>
-            
+             */}
 		</>
 	);
 }
