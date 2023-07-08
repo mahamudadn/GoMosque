@@ -56,7 +56,7 @@ function PrayerBar() {
 				label: "5",
 				label: "Five Prayers",
 				data: days,
-				backgroundColor: "green",
+				backgroundColor: ["green", "blue", "red", "yellow", "orange", "purple", "pink"],
 				borderColor: "black",
 			
 			},
