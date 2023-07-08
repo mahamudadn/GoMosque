@@ -21,15 +21,15 @@ function weeklyPrayer() {
 			<table className="weekly-prayer">
 				<thead>
 					<tr className="table-head">
-						<th>Fajr</th>
-						<th>Dhuhr</th>
-						<th>Asr</th>
-						<th>Magrib</th>
-						<th>Isha</th>
-                        <th>Mosque</th>
-						<th>Day</th>
-						<th>Edit</th>
-						<th>Delete</th>
+						<th className="prayer-column">Fajr</th>
+						<th className="prayer-column">Dhuhr</th>
+						<th className="prayer-column">Asr</th>
+						<th className="prayer-column">Magrib</th>
+						<th className="prayer-column">Isha</th>
+                        <th className="prayer-column">Mosque</th>
+						<th className="prayer-column">Day</th>
+						<th className="prayer-column">Edit</th>
+						<th className="prayer-column">Delete</th>
 					</tr>
 				</thead>
 
@@ -39,7 +39,7 @@ function weeklyPrayer() {
 					))}
 				</tbody>
 			</table>
-            </div>
+		</div>
 	);
 }
 

@@ -4,8 +4,7 @@
 
         .weekly-history-row {
             background-color: #e5dde9;
-            /* position: relative;
-            left: -20%; */
+            position: relative;
             /* Add other row styles */}
         .edit-button,
         .save-button,

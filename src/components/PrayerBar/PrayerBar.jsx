@@ -68,7 +68,7 @@ function PrayerBar() {
 		<div className="chart-container">
 			<h2 style={{ textAlign: "center", padding: "40px"}}>Prayer Chart</h2>
 			<Bar 
-			style={{padding: "20px", width:"70%", textAlign:"center", margin:  'auto',}}
+			style={{padding: "10px", width:"70%", textAlign:"center", margin:  'auto',}}
 			
 			data={data} options={options}></Bar>
 		</div>

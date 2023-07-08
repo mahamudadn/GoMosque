@@ -1,95 +1,101 @@
+        /* WeeklyPrayer.css */
     /* WeeklyPrayer.css */
-/* WeeklyPrayer.css */
-/* WeeklyPrayer.css */
-.prayer-table {
-    /* Add your styles using Tailwind CSS classes */
-    margin: auto; /* Center the table horizontally */
-    margin-top: 20px; /* Add top margin */
-    margin-bottom: 20px; /* Add bottom margin */
-    width: 80vw; /* Set the width to 50% of the viewport width */
-  }
-    
-    .prayer_history {
+    /* WeeklyPrayer.css */
+    .prayer-table {
         /* Add your styles using Tailwind CSS classes */
-        text-align: center;
-        font-size: 24px;
-        font-weight: bold;
-        margin-bottom: 20px;
+        margin: auto; /* Center the table horizontally */
+        margin-top: 20px; /* Add top margin */
+        margin-bottom: 20px; /* Add bottom margin */
+        width: 80vw; /* Set the width to 50% of the viewport width */
     }
-    
-    .weekly-prayer {
-        /* Add your styles using Tailwind CSS classes */
-        border-collapse: collapse;
-        width: 100%;
-    }
-    
-    .weekly-prayer th,
-    .weekly-prayer td {
-        border: 1px solid #e2e8f0;
-        padding: 8px;
-        text-align: center;
         
-     
-    }
-    
-     .table-head th {
-   
-        /* background-color: rgb(74, 6, 114); */
-    }
-    
-    .weekly-prayer .table-head th:nth-child(n+6) {
-        /* background-color: #0a2a4b; */
-    }
-    
-    .weekly-prayer .table-head th:nth-child(n+7) {
-        background-color: #e2e8f0;
-    }
-    
-    .weekly-prayer .table-head th:nth-child(n+8) {
-        background-color: #cbd5e0;
-    }
-    
-    .weekly-prayer .table-head th:nth-child(n+9) {
-        background-color: #a0aec0;
-    }
-    
-    .weekly-prayer .table-head th:nth-child(n+10) {
-        background-color: #718096;
+        .prayer_history {
+            /* Add your styles using Tailwind CSS classes */
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            padding-left: 50px;
+        }
         
-    }
+        .weekly-prayer {
+            /* Add your styles using Tailwind CSS classes */
+            border-collapse: collapse;
+            width: 100%;
+        }
+        
+        .weekly-prayer th,
+        .weekly-prayer td {
+            border: 1px solid #e2e8f0;
+            padding: 8px;
+            text-align: center;
+            
+        
+        }
+        
+        .table-head th {
     
-    .weekly-prayer tbody tr:nth-child(even) {
-        background-color: #f7fafc;
-    }
-    
-    .weekly-prayer tbody tr:hover {
-        background-color: #edf2f7;
-    }
-    
-    .weekly-prayer tbody td:nth-child(n+6) {
-        font-weight: bold;
-    }
-    
-    .weekly-prayer tbody td:last-child {
-        display: flex;
-        justify-content: center;
-    }
-    
-    .weekly-prayer tbody td:last-child button {
-        margin-left: 5px;
-        padding: 5px 10px;
-        background-color: #d70b0b;
-        color: white;
-        border: none;
-        cursor: pointer;
-        border-radius: 25%;
-    }
-    
-    .weekly-prayer tbody td:last-child button:hover {
-        background-color: #e53e3e;
-    }
-    
-    .weekly-prayer tbody td:last-child button:focus {
-        outline: none;
-    }
-    
+            background-color: rgb(63, 4, 97);
+            color: #cbd5e0;
+        }
+        
+        .weekly-prayer .table-head th:nth-child(n+6) {
+            background-color: rgb(63, 4, 97);
+            color: #cbd5e0;
+        }
+        
+        .weekly-prayer .table-head th:nth-child(n+7) {
+            background-color: rgb(63, 4, 97);
+            color: #cbd5e0;
+        }
+        
+        .weekly-prayer .table-head th:nth-child(n+8) {
+            background-color: rgb(63, 4, 97);
+            color: #cbd5e0;
+        }
+        
+        .weekly-prayer .table-head th:nth-child(n+9) {
+            ackground-color: rgb(63, 4, 97);
+            color: #cbd5e0;
+        }
+        
+        .weekly-prayer .table-head th:nth-child(n+10) {
+            background-color: #718096;
+            
+        }
+        
+        .weekly-prayer tbody tr:nth-child(even) {
+            background-color: #f7fafc;
+        }
+        
+        .weekly-prayer tbody tr:hover {
+            background-color: #edf2f7;
+        }
+        
+        .weekly-prayer tbody td:nth-child(n+6) {
+            font-weight: bold;
+        }
+        
+        .weekly-prayer tbody td:last-child {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .weekly-prayer tbody td:last-child button {
+            margin-left: 5px;
+            padding: 5px 10px;
+            background-color: #d70b0b;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 25%;
+        }
+        
+        .weekly-prayer tbody td:last-child button:hover {
+            background-color: #e53e3e;
+        }
+        
+        .weekly-prayer tbody td:last-child button:focus {
+            outline: none;
+        }
+        
