@@ -1,26 +1,29 @@
     .container {
         display: flex;
         justify-content: center;
+        /* background-image: url('../images/prayer.jpg'); */
+        background-size: cover;
+        background-position: center;
     }
-    
-    .content-wrapper {
-        display: flex;
-        align-items: center;
-    }
-    
-    .custom-image {
-        width: 200px;
-        height: auto;
-    }
-    
-    .text-wrapper {
-        margin-left: 20px;
-    }
-    
-    .custom-text {
-        font-size: 16px;
-        line-height: 1.5;
-        color: #333;
-        font-family: Arial, sans-serif;
-    }
-    
+
+        .content-wrapper {
+            display: flex;
+            align-items: center;
+        }
+        
+        .custom-image {
+            width: 200px;
+            height: auto;
+        }
+        
+        .text-wrapper {
+            margin-left: 20px;
+        }
+        
+        .custom-text {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333;
+            font-family: Arial, sans-serif;
+        }
+        

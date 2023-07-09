@@ -34,9 +34,9 @@ ChartJS.register(
 
 function PrayerBar() {
 	const dispatch = useDispatch();
-	useEffect(()=>{
-		dispatch({type: 'FETCH_WEEKLY'});
-	}, []);
+	// useEffect(()=>{
+	// 	dispatch({type: 'FETCH_WEEKLY'});
+	// }, []);
 	const weekly = useSelector(store => store.weeklyReducer);
 	console.log('weekly reducer', weekly)
 

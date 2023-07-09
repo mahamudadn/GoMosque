@@ -1,15 +1,17 @@
-    PrayerForm.css   
     .prayer-form-container {
         display: flex;
         justify-content: center;
         align-items: center;
         height: 100vh;
+        margin-top: 12px;
     }
     
     .prayer-form-table {
-        width: 400px;
-        border-collapse: collapse;
-        margin-bottom: 20px;
+        width: 350px;
+        /* border-collapse: collapse; */
+        margin-top: 20px;
+        padding: auto;
+        
     }
     
     .prayer-form-table th {
@@ -21,20 +23,23 @@
     }
     
     .prayer-form-table td {
-        padding: 20px;
+        padding: 18px;
+        
         /* border-bottom: 1px solid #ccc; */
     }
     
     .prayer-form-table .prayer-checkbox {
-        margin: 0;
+        margin-bottom: px;
+        
     }
     
     .add-prayer-button {
-        padding: 10px 20px;
+        padding: 10px 5px;
         background-color: #6922c0;
         color: #fff;
         border-radius:25%;
         cursor: pointer;
+        margin-bottom: 100px;
         
     }
     

@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 
 import "./WeeklyHistory.css";
-import PrayerChart from "../PrayerChart/PrayerChart";
+// import PrayerChart from "../PrayerChart/PrayerChart";
 // import { shallowEqual } from "react-redux";
 
 function weeklyHistory({ prayer }) {
@@ -19,7 +19,7 @@ function weeklyHistory({ prayer }) {
 	const [isha, setIsha] = useState(prayer.isha);
 	const [totalMosques, setTotalMosques] = useState(prayer.totalMosques);
 	const [mosqueCount, setMosqueCount] = useState(
-		Number(prayer.fajr) +
+		    Number(prayer.fajr) +
 			Number(prayer.dhuhr) +
 			Number(prayer.asr) +
 			Number(prayer.magrib) +
