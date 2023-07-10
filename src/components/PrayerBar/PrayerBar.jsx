@@ -41,6 +41,9 @@ function PrayerBar() {
 	console.log('weekly reducer', weekly)
 
 	const days = weekly.map(week => week.mosque_prayer);
+	// const days = weekly.map(week => week.mosque_prayer === weekly.mosque_prayer);
+	console.log('This is days it is an array:', days)
+
 console.log(days);
 
 	

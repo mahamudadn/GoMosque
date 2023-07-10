@@ -8,8 +8,8 @@ const router = express.Router();
 router.get("/", (req, res) => {
 	console.log("inside the GET for weekly");
 	// GET route code here
-	const queryText = `SELECT to_char(date, 'DAY') AS date, sum( 
-        CAST (fajr AS INT) + CAST (dhuhr AS INT) + CAST (dhuhr AS INT) + CAST (asr AS INT) + CAST (asr AS INT) ) AS mosque_prayer FROM "weekly_prayers"
+	const queryText = `
+	SELECT to_char(date, 'DAY') AS date, sum( CAST (fajr AS INT) + CAST (dhuhr AS INT) + CAST (asr AS INT) + CAST (magrib AS INT) + CAST (isha AS INT) ) AS mosque_prayer FROM "weekly_prayers"
        WHERE "user_id" = $1
        GROUP BY "id"
        ORDER BY "date"

@@ -11,9 +11,15 @@ function weeklyPrayer() {
 
 	useEffect(() => {
 		dispatch({ type: "FETCH_HISTORY" });
-		console.log(history);
+		
 	}, []);
 
+
+
+	console.log('History reducser', history);
+
+
+	
 	return (
 		<div className="prayer-table">
 			<h2 className="prayer_hisory">PRAYERS HISTORY</h2>

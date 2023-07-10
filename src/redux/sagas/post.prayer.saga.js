@@ -3,6 +3,7 @@ import { put, takeLatest } from 'redux-saga/effects';
 
 
 function* postPryer(action){
+    console.log('POST PRAYER SAGA', action.payload);
     try{ 
         yield axios.post('/api/prayer/', action.payload);
 

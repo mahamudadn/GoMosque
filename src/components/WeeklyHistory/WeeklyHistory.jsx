@@ -18,6 +18,7 @@ function weeklyHistory({ prayer }) {
 	const [magrib, setMagrib] = useState(prayer.magrib);
 	const [isha, setIsha] = useState(prayer.isha);
 	const [totalMosques, setTotalMosques] = useState(prayer.totalMosques);
+	
 	const [mosqueCount, setMosqueCount] = useState(
 		    Number(prayer.fajr) +
 			Number(prayer.dhuhr) +
@@ -52,10 +53,12 @@ function weeklyHistory({ prayer }) {
 
 	const handleEdit = () => {
 		setEdit(!edit);
-		console.log(fajr, dhuhr, asr, magrib, isha);
+		console.log('CLLLLIIICKKKEDDD EDDDIIITTTTT',fajr, dhuhr, asr, magrib, isha);
 	};
 
 	const handleSave = () => {
+		console.log('CLLLLIIICKKKEDDD SAAAAAAAVVVVVEEEE',fajr, dhuhr, asr, magrib, isha);
+
 		const historyObj = {
 			prayer: prayer.id,
 			fajr: fajr,
@@ -63,7 +66,7 @@ function weeklyHistory({ prayer }) {
 			asr: asr,
 			magrib: magrib,
 			isha: isha,
-			totalMosques: totalMosques,
+			// totalMosques: totalMosques,
 		};
 		setEdit(!edit);
 
@@ -71,6 +74,8 @@ function weeklyHistory({ prayer }) {
 			type: "EDIT_HISTORY",
 			payload: historyObj,
 		});
+
+		console.log('SENDING HISTORY OBJECT TO SERVER', historyObj);
 	};
 	const handleDelete = () => {
 		console.log(prayer.id);

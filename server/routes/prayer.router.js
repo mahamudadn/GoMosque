@@ -52,7 +52,7 @@ router.post('/', (req, res) => {
 
 router.put('/:id', (req, res) => {
   // req.body
-  console.log(req.body, req.params.id);
+  console.log('PRAYER ROUTER UPDATE','REQBODY:',req.body, 'REQPARAMS', req.params.id);
   const {
     fajr,
     dhuhr,
