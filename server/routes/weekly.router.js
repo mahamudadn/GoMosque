@@ -11,7 +11,7 @@ router.get("/", (req, res) => {
 	const queryText = `SELECT to_char(date, 'DAY') AS date, sum( 
         CAST (fajr AS INT) + CAST (dhuhr AS INT) + CAST (dhuhr AS INT) + CAST (asr AS INT) + CAST (asr AS INT) ) AS mosque_prayer FROM "weekly_prayers"
        WHERE "user_id" = $1
-       GROUP BY id
+       GROUP BY "id"
        ORDER BY "date"
        LIMIT 7;
    `;
@@ -24,7 +24,7 @@ router.get("/", (req, res) => {
 		})
 		.catch((err) => {
 			console.log("error getting prayers", err);
-			res.sendStatus(200);
+			res.sendStatus(500);
 		});
 });
 

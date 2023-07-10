@@ -7,6 +7,7 @@ const router = express.Router();
  */
 router.get('/', (req, res) => {
   // GET route code here
+  console.log('Prayer router get', req.user.id);
   const queryText = `SELECT id, user_id, fajr, dhuhr, asr, magrib, isha, to_char(date, 'DAY Month DD, YYYY') AS date FROM  "weekly_prayers"
                       WHERE "user_id" = $1
                       ORDER BY "id" ASC;`;
@@ -42,7 +43,7 @@ router.post('/', (req, res) => {
     magrib,
     isha])
   .then(result => {
-    res.sendStatus(200);
+    res.sendStatus(201);
   }).catch(err => {
     console.log('Error in POST /prayer' , err)
     res.sendStatus(500);
@@ -51,6 +52,7 @@ router.post('/', (req, res) => {
 
 router.put('/:id', (req, res) => {
   // req.body
+  console.log(req.body, req.params.id);
   const {
     fajr,
     dhuhr,

@@ -16,7 +16,11 @@ function UserPage() {
         /> */}
       {/* <p>Your ID is: {user.id}</p> */}
       {/* <LogOutButton className="btn" /> */}
+      <p className='about'>This app is designed to help users track and monitor their prayers specifically performed at mosques. 
+            It allows users to keep a record of the number of prayers they have offered in mosques over time. This app enables users to evaluate their prayer performance 
+            and stay consistent with their religious practices.</p>
     </div>
+    
   );
 }
 

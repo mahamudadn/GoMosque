@@ -1,49 +1,38 @@
-.container{
+    .container{
 
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    height: 100vh;
-    overflow: hidden;
-    background-image: url(https://i0.wp.com/www.islamicinsights.com/wp-content/uploads/Nullifiers-of-Prayer.jpg?resize=780%2C470&ssl=1);
-    position: relative;
-    background-size:cover ;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        height: 100vh;
+        overflow: hidden;
+        background-image: url(https://i0.wp.com/www.islamicinsights.com/wp-content/uploads/Nullifiers-of-Prayer.jpg?resize=780%2C470&ssl=1);
+        position: relative;
+        background-size:cover ;
+        
+        
+    }
+
     
-  }
-  
-  /* .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-  } */
-  
-  h2 {
-    text-align: left;
-    margin-top: 10px;
-    margin-left: 20px;
-    color: rgb(17, 9, 173);
-    z-index: 1;
-  }
-  
-  /* .btn {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-  } */
-  
-  /* .custom-image {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 70%;
-    height: auto;
-    background-size: cover;
-    background-position: center left;
-  } */
-  
+    .about {
+        background-color: #480990;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(80, 8, 129, 0.1); /* Add a subtle box shadow to the card */
+        width:400px;
+        color: aliceblue;
+        text-align: right;
+        float: right;
+        border-radius: 25%;
+    }
     
+    
+    h2 {
+        text-align: left;
+        margin-top: 10px;
+        margin-left: 20px;
+        color: rgb(17, 9, 173);
+        z-index: 1;
+    }
+    
+
+        
