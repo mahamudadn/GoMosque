@@ -31,10 +31,7 @@ function AboutPage() {
       </ul>
       <h3>Languages Used</h3>
       <ul>
-        <li>React, Redux, Node, Express, postGrass. </li>
-        <li> Cohort: Diomond Cohort</li>
-        <li>My App: Prayer Tracking App</li>
-        <li>My App: Prayer Tracking App</li>
+        <li>React, Redux, Node, Express, PostgreSQL,  JavaScript </li>
       </ul>
       <h3>Challenges </h3>
       <ul>
