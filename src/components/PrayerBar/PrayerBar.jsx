@@ -53,7 +53,7 @@ console.log(days);
 		labels: weekly&&[`${weekly[0]?.date}`, `${weekly[1]?.date}`, `${weekly[2]?.date}`, `${weekly[3]?.date}`, `${weekly[4]?.date}`, `${weekly[5]?.date}`, `${weekly[6]?.date}`],
 		datasets: [
 			{
-				label: "5.0",
+				label: "1",
 				label: "Five Prayers",
 				data: days,
 				backgroundColor: ["green", "blue", "red", "yellow", "orange", "purple", "pink"],
@@ -68,7 +68,7 @@ console.log(days);
 		<div className="chart-container">
 			<h2 style={{ textAlign: "center", padding: "40px"}}>Prayer Chart</h2>
 			<Bar 
-			style={{padding: "10px", width:"70%", textAlign:"center", margin:  'auto',}}
+			style={{padding: "10px", width:"60%", textAlign:"center", margin:  'auto',}}
 			
 			data={data} options={options}></Bar>
 		</div>
