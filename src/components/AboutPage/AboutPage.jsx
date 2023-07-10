@@ -42,8 +42,8 @@ function AboutPage() {
       <h3>Next Step</h3>
       <ul>
         <li>adding Prayer Times </li>
-        <li>Quran reading Record</li>
-        <li>My App: Prayer Tracking App</li>
+        <li>Social Features</li>
+        <li>Prayer Reminders</li>
       
       </ul>
       <h3> Thanks</h3>

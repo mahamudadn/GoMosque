@@ -40,7 +40,7 @@ function PrayerBar() {
 	const weekly = useSelector(store => store.weeklyReducer);
 	console.log('weekly reducer', weekly)
 
-	const days = weekly?.map(week => week.mosque_prayer);
+	const days = weekly.map(week => week.mosque_prayer);
 console.log(days);
 
 	
