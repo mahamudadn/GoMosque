@@ -23,6 +23,7 @@ import PrayerForm from "../PrayerForm/PrayerForm";
 import WeeklyPrayer from "../WeeklyPrayer/WeeklyPrayer";
 
 import PrayerBar from "../PrayerBar/PrayerBar";
+// import InfoPage from '../InfoPage/InfoPage'
 
 import "./App.css";
 // import HistoryBar from "../HistoyBar/HistoryBar";
@@ -65,13 +66,13 @@ function App() {
 						<UserPage />
 					</ProtectedRoute>
 
-					<ProtectedRoute
+					{/* <ProtectedRoute
 						// logged in shows InfoPage else shows LoginPage
 						exact
 						path="/info"
 					>
 						<InfoPage />
-					</ProtectedRoute>
+					</ProtectedRoute> */}
 
 					<ProtectedRoute
 						// logged in shows InfoPage else shows LoginPage

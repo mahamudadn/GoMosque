@@ -34,10 +34,10 @@ function Nav() {
 						</Link>
 
 						<Link className="navLink" to="/prayerform">
-							Prayers
+							Add Prayers
 						</Link>
 						<Link className="navLink" to="/weeklyprayer">
-							Weekly Prayers
+							Prayer History
 						</Link>
 
 						<Link className="navLink" to="/prayerbar">
@@ -46,10 +46,10 @@ function Nav() {
             {/* <Link className="navLink" to="/historybar">
 							Bar
 						</Link> */}
-
-						{/* {/* <Link className="navLink" to="/info">
+{/* 
+						<Link className="navLink" to="/info">
               Info Page
-            </Link> */}
+            </Link>  */}
 
 						<LogOutButton className="navLink" />
 					</>
