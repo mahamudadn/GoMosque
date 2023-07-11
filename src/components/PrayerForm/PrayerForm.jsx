@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 import "./PrayerForm.css";
-import { Container } from "@mui/material";
+import { Container, Checkbox, Button } from "@mui/material";
 import { useHistory } from "react-router-dom";
 
 function prayerForm() {
@@ -47,7 +47,7 @@ function prayerForm() {
 					<thead>
 						<tr>
 							<th>Prayers</th>
-							<th>Prayed At Mosque</th>
+							<th>Mosque ?</th>
 						</tr>
 					</thead>
 					<tbody>

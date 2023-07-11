@@ -1,13 +1,12 @@
 .container.about-page {
-    max-width: 800px;
-    height: auto;
+    max-width: 500px;
+    max-height: auto;
     margin: 0 auto;
     padding: 3px;
     color:rgb(48, 28, 28);
   
-    font-size: x-large;
-  
-   
+    font-size: medium;
+
     border-radius: 8px;
     font-family: Arial, sans-serif;
     line-height: 1.5;

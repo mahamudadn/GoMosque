@@ -11,9 +11,9 @@ function AboutPage() {
     <div className="container about-page">
       <h2>Introduction</h2>
       <ul>
-        <li>Name: My name is Mahamud</li>
+        <li>Name: Mahamud Aden</li>
         <li> Cohort: Diomond Cohort</li>
-        <li>My App: Prayer Tracking App</li>
+        <li>My App: GoMosque</li>
       </ul>
       <h2>What This App Solves</h2>
       <ul>
@@ -36,6 +36,7 @@ function AboutPage() {
       <h2>Challenges </h2>
       <ul>
         <li>Changing The idea into App</li>
+        <li>Setting up the database</li>
         <li> adding bar chart to my app</li>
       
       </ul>
@@ -48,11 +49,11 @@ function AboutPage() {
       </ul>
       <h2> Thanks</h2>
       <ul>
+      <li>To Allah, for making it possible </li>
         <li>Prime </li>
         <li> My instructors: Liz, Dane, Emma</li>
         <li>My Diomond Cohort</li>
         <li>Family</li>
-   
       </ul>
       
       

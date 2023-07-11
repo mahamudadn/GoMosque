@@ -2,15 +2,15 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100vh;
+        min-height: auto;
         margin-top: 12px;
     }
     
     .prayer-form-table {
-        width: 250px;
+        width: 290px;
         /* border-collapse: collapse; */
         margin-top: 20px;
-        padding: 10px;
+        padding: 20px;
         
     }
     
@@ -23,18 +23,18 @@
     }
     
     .prayer-form-table td {
-        padding: 5px;
-        
-        /* border-bottom: 1px solid #ccc; */
+        padding-top: 25px;
+        /* border-bottom: 3px solid #ccc; */
+        border-radius: 10%;
     }
     
-    /* .prayer-form-table .prayer-checkbox {
-        margin-bottom: px;
+    .prayer-form-table .prayer-checkbox {
+        margin-bottom: 15px;
         
-    } */
+    }
     
     .add-prayer-button {
-        padding: 7px 2px;
+        padding: 15px 15px;
         background-color: #6922c0;
         color: #fff;
         border-radius:25%;

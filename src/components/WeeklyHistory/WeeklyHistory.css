@@ -1,7 +1,4 @@
         /* WeeklyHistory.css */
-
-/* WeeklyPrayer.css */
-
         .weekly-history-row {
             background-color: #e5dde9;
             position: relative;
@@ -39,7 +36,7 @@
         -o-appearance: none;
         appearance: none;
         border: 1px solid #34495E;
-        border-radius: 4px;
+        border-radius: 20px;
         outline: none;
         transition-duration: 0.3s;
         background-color: #41B883;
@@ -48,7 +45,7 @@
     
     .prayer-checkbox > input:checked {
         border: 1px solid #41B883;
-        background-color: #34495E;
+        background-color: #13c55d;
     }
     
     .prayer-checkbox > input:checked + span::before {
@@ -62,6 +59,6 @@
     }
     
     .prayer-checkbox > input:active {
-        border: 2px solid #34495E;
+        border: 2px solid #16c60d;
     }
     

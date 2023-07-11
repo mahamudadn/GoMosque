@@ -66,7 +66,7 @@ function weeklyHistory({ prayer }) {
 			asr: asr,
 			magrib: magrib,
 			isha: isha,
-			// totalMosques: totalMosques,
+			totalMosques: totalMosques,
 		};
 		setEdit(!edit);
 
