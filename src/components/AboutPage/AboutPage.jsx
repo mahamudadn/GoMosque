@@ -55,6 +55,13 @@ function AboutPage() {
         <li>My Diomond Cohort</li>
         <li>Family</li>
       </ul>
+
+      <h2>Contact Me:  </h2>
+    <br/>
+     <p>Visit my: <a href="https://www.linkedin.com/in/mahamudaden//"target='_blank' >Linkedin </a></p> 
+     <br />
+      <p>Visit my: <a href="https://github.com/mahamudadn" target='_blank' >Github </a></p>
+
       
       
     </div>
