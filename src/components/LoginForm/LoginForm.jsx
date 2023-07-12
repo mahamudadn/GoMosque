@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import {useSelector} from 'react-redux';
 
+
 import './LoginForm.css';
 
 
@@ -39,6 +40,7 @@ function LoginForm() {
   }; // end login
 
   return (
+   
     <Container maxWidth='xs' sx={{
       mt:10 ,
       mb:15,
@@ -47,7 +49,7 @@ function LoginForm() {
       alignItems: 'center',
       justifyContent:'center'
     }}>
-    <Grid container spacing={1}>
+    <Grid container spacing={0.7}>
       
         <Grid item xs={12} sm={12} md={12} lg={12} xl={12} component={Paper} elevation={19} 
         >
@@ -101,7 +103,7 @@ function LoginForm() {
         </Grid>
       </Grid>
       </Container>
-  );
+   );
 }
 
 export default LoginForm;

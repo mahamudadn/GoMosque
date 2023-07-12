@@ -86,7 +86,7 @@ function RegisterForm() {
                 variant="contained"
                 sx={{ mt: 3, mb: 2, p:2}}
               >
-                Sign In
+               Register
               </Button>
             </Box>
           </Box>
