@@ -26,15 +26,14 @@ __Prerequisites__
 - You can monitor your mosque prayers and evaluate your 7-day prayer history through the bar chart visualization on the dashboard.
 
 **Built With**
-__JavaScript__: The programming language used for both frontend and backend development.
-__React:__ A predictable state container for JavaScript apps. It manages the   app's state and enables centralized data management.
-react-charts2: javascript library that handles charts.
-Redux Saga: A library for managing side effects in Redux applications. It handles asynchronous actions, such as API calls.
-Node.js: A JavaScript runtime built on Chrome's V8 JavaScript engine. It provides the backend environment for the app.
-Express.js: A minimal and flexible Node.js web application framework. It handles routing and server-side logic.
-CSS: The styling language used to design the app's user interface.
-HTML: The markup language used to structure the app's content.
-SQL: The language used for managing the app's database, allowing for efficient storage and retrieval of game information.
+● JavaScript: The programming language used for both frontend and backend development.
+● React:A predictable state container for JavaScript apps. It manages the   app's state and enables centralized data management.
+● react-charts2: javascript library that handles charts.
+● Redux Saga: A library for managing side effects in Redux applications. It handles asynchronous actions, such as API calls.
+● Node.js: A JavaScript runtime built on Chrome's V8 JavaScript engine. It provides the backend environment for the app.
+● Express.js: A minimal and flexible Node.js web application framework. It handles routing and server-side logic.
+● CSS: The styling language used to design the app's user interface.
+● SQL: The language used for managing the app's database, allowing for efficient storage and retrieval of game information.
 
 **Author**
 Mahamud Aden
